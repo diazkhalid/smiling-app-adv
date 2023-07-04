@@ -14,6 +14,11 @@ const LoginPage = {
     wave.classList.add('d-none');
     Session.isNotAdmin();
     return `
+        <div id="loading-overlay" class="loading-overlay d-none">
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
         <div class="container-login">
             <div class="forms-container">
                 <div class="signin-signup" id="formDiv">
@@ -85,6 +90,7 @@ const LoginPage = {
   async afterRender() {
     const sign_in_btn = document.querySelector('#sign-in-btn');
     const sign_up_btn = document.querySelector('#sign-up-btn');
+    const loading_overlay = document.querySelector('#loading-overlay');
     const container = document.querySelector('.container-login');
 
     sign_up_btn.addEventListener('click', () => {
@@ -106,9 +112,11 @@ const LoginPage = {
 
       const adminUsername = adminUsernameInput.value;
       const adminPassword = adminPasswordInput.value;
+      loading_overlay.classList.remove('d-none');
       const adminData = await StoryDbSource.getAdmin(adminUsername);
+      loading_overlay.classList.toggle('d-none');
 
-      if (adminData.length < 0) {
+      if (adminData.length <= 0) {
         const Toast = Swal.mixin({
           toast: true,
           position: 'top-center',
@@ -125,7 +133,6 @@ const LoginPage = {
           icon: 'error',
           title: 'Invalid Login',
         });
-
         return;
       }
       let validPass = false;
