@@ -100,6 +100,12 @@ class StoryDbSource {
     const responseJson = await response.json();
     return responseJson;
   }
+
+  static async getAdmin(username) {
+    const response = await fetch(API_ENDPOINT.GET_ADMIN(username));
+    const responseJSON = await response.json();
+    return responseJSON;
+  }
 }
 
 export default StoryDbSource;

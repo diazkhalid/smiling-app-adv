@@ -16,6 +16,7 @@ const API_ENDPOINT = {
   SEND_MSG: `${BASE_URL}sendMsg`,
   GET_ALL_MSG: `${BASE_URL}getAllMsg`,
   DELETE_MSG: (id) => `${BASE_URL}message/delete/${id}`,
+  GET_ADMIN: (username) => `${BASE_URL}adminLogin/${username}`,
 };
 
 export default API_ENDPOINT;

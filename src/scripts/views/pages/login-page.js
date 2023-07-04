@@ -1,6 +1,8 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable camelcase */
 import Swal from 'sweetalert2';
 import Session from '../../utils/session';
+import StoryDbSource from '../../data/storydb-source';
 
 const LoginPage = {
   async render() {
@@ -99,13 +101,41 @@ const LoginPage = {
     const adminPasswordInput = adminLoginForm.querySelector('#pass-admin');
     const adminLoginButton = adminLoginForm.querySelector('#submit-admin');
 
-    adminLoginButton.addEventListener('click', (event) => {
+    adminLoginButton.addEventListener('click', async (event) => {
       event.preventDefault();
 
       const adminUsername = adminUsernameInput.value;
       const adminPassword = adminPasswordInput.value;
+      const adminData = await StoryDbSource.getAdmin(adminUsername);
 
-      if (adminUsername === 'admin' && adminPassword === 'admin123') {
+      if (adminData.length < 0) {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-center',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: 'error',
+          title: 'Invalid Login',
+        });
+
+        return;
+      }
+      let validPass = false;
+      for (let i = 0; i < adminData.length; i++) {
+        if (adminPassword === adminData[i].password) {
+          validPass = true;
+        }
+      }
+
+      if (validPass === true) {
         const Toast = Swal.mixin({
           toast: true,
           position: 'top-end',
@@ -124,7 +154,7 @@ const LoginPage = {
           title: 'Signed in successfully',
         });
         window.location.href = '#/dashboard-admin';
-      } else if (adminUsername !== 'admin' || adminPassword !== 'admin123') {
+      } else {
         const Toast = Swal.mixin({
           toast: true,
           position: 'top-center',
@@ -142,6 +172,44 @@ const LoginPage = {
           title: 'Invalid Login',
         });
       }
+      // I will not delete this, just in case if I need it in the future😁
+      // if (adminUsername === 'admin' && adminPassword === 'admin123') {
+      //   const Toast = Swal.mixin({
+      //     toast: true,
+      //     position: 'top-end',
+      //     showConfirmButton: false,
+      //     timer: 3000,
+      //     timerProgressBar: true,
+      //     didOpen: (toast) => {
+      //       toast.addEventListener('mouseenter', Swal.stopTimer);
+      //       toast.addEventListener('mouseleave', Swal.resumeTimer);
+      //     },
+      //   });
+
+      //   Session.isAdmin();
+      //   Toast.fire({
+      //     icon: 'success',
+      //     title: 'Signed in successfully',
+      //   });
+      //   window.location.href = '#/dashboard-admin';
+      // } else if (adminUsername !== 'admin' || adminPassword !== 'admin123') {
+      //   const Toast = Swal.mixin({
+      //     toast: true,
+      //     position: 'top-center',
+      //     showConfirmButton: false,
+      //     timer: 3000,
+      //     timerProgressBar: true,
+      //     didOpen: (toast) => {
+      //       toast.addEventListener('mouseenter', Swal.stopTimer);
+      //       toast.addEventListener('mouseleave', Swal.resumeTimer);
+      //     },
+      //   });
+
+      //   Toast.fire({
+      //     icon: 'error',
+      //     title: 'Invalid Login',
+      //   });
+      // }
     });
 
     // Form ganti password
