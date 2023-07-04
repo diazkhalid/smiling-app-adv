@@ -75,8 +75,8 @@ Berikut merupakan beberapa faktor yang dapat menunda pembuatan proyek website ya
       <th> Back-end </th>
     </tr>
     <tr>
-     <td> https://smiling-api-docs.netlify.app/#/ </td>
-     <td> https://github.com/diazkhalid/smiling-back-end-wdb   </td>
+     <td>Coming Soon!</td>
+     <td> https://github.com/diazkhalid/back-end-smiling-adv</td>
     </tr>
   </table>
        
