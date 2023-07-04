@@ -1,0 +1,829 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Merriweather:wght@700&family=Pacifico&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fffef3;
+  color: rgb(0, 0, 0);
+  color: #3f3f3f;
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 32px;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Merriweather", serif;
+  text-align: center;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: "Comic Neue", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+p,
+td {
+  font-family: "Comic Neue", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+
+.navbar-color {
+  background-color: #ffe76a;
+}
+
+.navbar-brand{
+  margin-right: 0;
+}
+
+.brand-font {
+  margin: 0 auto;
+
+}
+
+.navlink-font {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  /* font-family: 'Plus Jakarta Sans', sans-serif; */
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+}
+
+.navlink-font a:hover {
+  text-decoration: underline;
+}
+
+.debug {
+  border: 1px solid black;
+  background-color: red;
+}
+
+.ml2-1 {
+  margin-left: 1rem;
+}
+
+.mr2-1 {
+  margin-right: 1rem;
+}
+
+.burger-text {
+  color: #3f3f3f !important;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.drawer {
+  position: absolute;
+  width: 100%;
+  height: 213px;
+  background-color: #ecf0f1;
+  z-index: 999;
+  -webkit-transform: translate(-3300px, 0);
+  transform: translate(-3300px, 0);
+  transition: transform 0.6s ease-in-out;
+  text-align: center;
+  padding: 0;
+  display: none;
+}
+
+.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.drawer.open {
+  left: 0;
+}
+
+.drawer-nav {
+  padding: 0;
+}
+
+.drawer-nav .nav-item {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.hero {
+  width: 100%;
+  height: 43rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.hero__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 43rem;
+}
+
+.hero__content {
+  width: 85%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 2rem;
+  border-radius: 2rem;
+  color: var(--green);
+  top: 350px;
+  margin: auto;
+  position: absolute;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 65px;
+}
+
+.hero__title span:first-child {
+  color: var(--green);
+}
+
+.hero__title span:last-child {
+  color: var(--orange);
+}
+
+.hero__description {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Comic Neue", cursive;
+}
+
+img#img-item {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s all ease-in-out;
+}
+
+img#img-item:hover {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.1);
+}
+
+#divImgCard {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.shadow-card {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.14);
+}
+
+.rad-card {
+  border-radius: 20px;
+}
+
+#body-card {
+  height: 160px;
+  margin-bottom: 10px;
+}
+
+#card-container {
+  padding: 10px;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: #3f3f3f;
+}
+
+.card-title a:hover {
+  text-decoration: underline;
+}
+
+audio {
+  width: 100%;
+}
+
+
+
+audio::-webkit-media-controls-panel {
+  background-color: #ffffff;
+}
+
+.story-picture {
+  max-height: 360px;
+}
+
+.table td {
+  padding: 0 0 20px 0;
+}
+
+.table tr td:first-child {
+  width: fit-content;
+  padding-right: 10px;
+}
+
+.table tr td:last-child {
+  padding-left: 5%;
+}
+
+.table td a {
+  color: #3f3f3f;
+}
+
+.table td a:hover {
+  font-weight: 700;
+}
+
+.player {
+  background-color: #fff;
+  border: 3px solid #999999;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.14);
+}
+
+.footer {
+  padding: 10px;
+  background-color: #ffe76a;
+}
+
+.footer-text {
+  padding: 30px;
+  background-color: #ffe76a;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.footer-year {
+  font-family: "Comic Neue", cursive;
+}
+
+.footer-brand {
+  font-family: "Pacifico", cursive;
+}
+
+.footer-tagline {
+  font-family: "Comic Neue", cursive;
+}
+
+.round-l-search {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+.round-r-search {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-left: none;
+  font-family: "Comic Neue", cursive;
+  font-size: 20px;
+}
+
+.shadow-search {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.299);
+  border-radius: 15px;
+}
+
+.sticky-top {
+  top: 100px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  background-color: #e58e26;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.border-nofound {
+  border: 1px solid rgba(206, 206, 206, 0.336);
+  background-color: #e7e5e57a;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+
+.review-item {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.review-body {
+  border: 1px solid rgb(223, 223, 223);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.review-body p {
+  margin: 0;
+}
+
+.review-name {
+  font-weight: 700;
+}
+
+.bg-smiling {
+  background-color: #ffe76a;
+}
+
+#noReview{
+  display: block;
+}
+
+/*  carousel      */
+
+
+.carousel-item {
+	height: 75vh;
+	min-height: 300px;
+}
+      
+.carousel-caption {
+	bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h5 {
+	font-size: 50px;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	margin-top: 25px;
+	font-family: 'Moon Dance', cursive;
+}
+.carousel-caption p {
+	width: 60%;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;
+}
+.carousel-caption a {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 5px 20px;
+	display: inline-block;
+	color: #fff;
+	margin-top: 15px;
+	border-radius: 5px;
+}
+    
+  .carousel-inner:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}      
+        .carousel-indicators {
+	bottom: 65px;
+}
+        .carousel-indicators button {
+	width: 100px !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav {
+	text-align: center;	
+}
+.navbar-collapse .nav-item .nav-link {
+	color: #000;
+}
+.carousel-caption {
+		bottom: 350px;
+	}
+.carousel-caption h5 {
+	font-size: 65px;
+}
+.carousel-caption p {
+	font-size: 18px;
+  width: 100%;
+	}
+}        
+@media only screen and (max-width: 767px) {
+	.navbar-nav {
+		text-align: center;
+		
+	}
+  .navbar-collapse .nav-item .nav-link {
+	color: #000;
+}  
+	.carousel-caption {
+		bottom: 165px;
+	}
+	.carousel-caption h5 {
+		font-size: 25px;
+	}
+	.carousel-caption p {
+		font-size: 12px;
+        width: 100%;
+	}
+	.carousel-caption a {
+		padding: 10px 15px;
+		font-size: 15px;
+	}
+    .navbar-collapse {
+	background: #fff;
+}
+}
+
+
+/* Team */
+.jumbotron{
+  padding-top: 4rem;
+}
+.jumbotron1{
+  padding-top: 4rem;
+}
+.jumbotron2{
+  padding-top: 5rem;
+}
+
+a{
+  color: #e03a3c;
+}
+a:hover{
+  color: #e76668;
+  text-decoration: none;
+}
+.team .member{
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.team .member .member-img{
+  position: relative;
+  overflow: hidden;
+}
+.team .member .social{
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+  -moz-transition: ease-in-out 0.3s;
+  -ms-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  text-align: center;
+}
+.team .member:hover .social{
+  opacity: 1;
+  bottom: 15px;
+}
+.team .member .social a {
+  transition: color 0.3s;
+  color: #111111;
+  margin: 0 3px;
+  padding-top: 7px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  background: #444444;
+  display: inline-block;
+  transition: ease-in-out 0.3s ;
+  -webkit-transition: ease-in-out 0.3s ;
+  -moz-transition: ease-in-out 0.3s ;
+  -ms-transition: ease-in-out 0.3s ;
+  -o-transition: ease-in-out 0.3s ;
+  color: #fff;
+}
+.team .member .social a:hover {
+  background: gray;
+}
+.team .member .social i {
+  font-size: 18px;
+}
+.team.member .member-info {
+  padding: 25px 15px;
+}
+.member-info h4 {
+  font-weight: bolder;
+  margin: 2px 5px;
+  font-size: 22px;
+  color: #111111;
+  text-align: center;
+  padding: 10px;
+}
+.member-info span {
+  display: block;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #aaaaaa;
+  text-align: center;
+}
+
+/* Section */
+section{
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-title{
+  text-align: center;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.section-title h2::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e03a3c;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+.section-bg {
+  padding: 120px 0;
+  color: #fff;
+}
+.section-bg::before {
+  content: "";
+  background: #ffe76a;
+  position: absolute;
+  bottom: 60px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: skewY(-2deg);
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -o-transform: skewY(-2deg);
+}
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: top;
+}
+
+#detail-story-container table, #detail-story-container tr, #detail-story-container td{
+  background-color: #00000000 !important;
+}
+
+#hero-button:hover{
+  color: white !important;
+}
+
+.form-control{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn-submit{
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+a{
+  min-height: 44px !important;
+  min-width: 44px !important;
+}
+
+.card-title > a{
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.drawer-nav > .nav-item{
+  padding-bottom: 5px !important;
+}
+
+.button-sub:hover{
+  box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.295);
+  background-color: #e58f26f2 !important;
+}
+
+/*Admin dash*/
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style untuk gambar admin */
+.sidebar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style untuk nama admin */
+.sidebar h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Style untuk navigasi anchor */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Style untuk konten dashboard */
+.dashboard-content {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+.dashboard-content h1 {
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*dashboard*/
+.container-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Style untuk card */
+.cardDash {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style untuk judul card */
+.cardDash h2 {
+  margin-bottom: 10px;
+}
+
+/* Style untuk jumlah item */
+.cardDash p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cardDash img {
+  width: 100%;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/*data review*/
+table.review-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.review-table th,
+table.review-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table.review-table th {
+  background-color: #f2f2f2;
+}
+
+.btn-delete {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #cc0000;
+}
+
+.d-none{
+  display: none;
+}
+
+/*admin mode button*/
+.admin-mode {
+  font-family: "Poppins", sans-serif !important;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  background-color: #273cfa;
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+  font-family: sans-serif;
+  display: block;
+  border: none;
+}
+
+.admin-mode:focus {
+  top: 0;
+}

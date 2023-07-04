@@ -1,0 +1,86 @@
+@media screen and (max-width: 1100px) {
+  .hero__title {
+    font-size: 50px;
+  }
+
+  .hero__description {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .drawer {
+    display: block;
+  }
+
+  .navlink-font {
+    font-size: 20px;
+  }
+
+  .shadow-card {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.14);
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .hero__content {
+    top: 400px;
+  }
+
+  .hero__title {
+    font-size: 37px;
+  }
+
+  .hero__description {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p,
+  td {
+    font-size: 16;
+  }
+}
+
+@media screen and (max-width: 493px) {
+  .footer-text {
+    font-size: 15px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .hero__content {
+    top: 350px;
+  }
+}
+
+@media (min-width: 767px) {
+  .carousel-caption {
+    top: 45%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 535px) {
+  .carousel-caption {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 1034px) {
+  .carousel-caption h5{
+    font-size: 30px !important;
+  }
+}
