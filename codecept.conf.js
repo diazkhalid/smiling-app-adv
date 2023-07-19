@@ -1,5 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 // eslint-disable-next-line import/no-extraneous-dependencies
+const path = require('path');
 const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
+const Dotenv = require('dotenv-webpack');
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
@@ -18,6 +21,13 @@ exports.config = {
       windowSize: '1200x900',
     },
   },
+  plugins: [
+    new Dotenv({
+      path: path.resolve(__dirname, '.env'),
+      systemvars: true,
+      safe: true,
+    }),
+  ],
   include: {
     I: './steps_file.js',
   },

@@ -22,8 +22,8 @@ const DashboardAdmin = {
           <img src="./logoatas.png" alt="Admin Photo">
           <h2>Hi, admin!</h2>
           <a href="#/dashboard-admin">Dashboard</a>
-          <a href="#/data-review">Data Review</a>
-          <a href="#/data-pesan">Data Pesan</a>
+          <a href="#/data-review" id="review-nav">Data Review</a>
+          <a href="#/data-pesan" id="msg-nav">Data Pesan</a>
           <a href="#/beranda">Keluar</a>
         </div>
       

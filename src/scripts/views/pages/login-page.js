@@ -233,7 +233,7 @@ const LoginPage = {
       const email = emailInput.value;
       const newPassword = newPasswordInput.value;
 
-      const mailtoLink = 'mailto:legendm804@gmail.com'
+      const mailtoLink = 'mailto:dadawha1202@gmail.com'
     + '?subject=Ganti Password'
     + `&body=Username: ${username
     }%0D%0AEmail: ${email

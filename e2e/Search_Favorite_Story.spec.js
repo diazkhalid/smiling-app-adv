@@ -15,7 +15,7 @@ Scenario('search favorite story', async ({ I }) => {
 
   I.amOnPage('/');
 
-  I.waitForElement('.card');
+  I.waitForElement('.card', 10);
   I.seeElement('.card');
 
   const storyTitles = [];
@@ -24,22 +24,22 @@ Scenario('search favorite story', async ({ I }) => {
     I.waitForElement('.card a');
     I.click(locate('.card a').at(i));
 
-    I.waitForElement('#likeButton');
+    I.waitForElement('#likeButton', 10);
     I.seeElement('#likeButton');
     I.click('#likeButton');
 
-    I.waitForElement('#swal2-title');
+    I.waitForElement('#swal2-title', 10);
     const popUpLike = await I.grabTextFrom('#swal2-title');
     assert.strictEqual(popUpLike, 'Liked!');
     I.click('.swal2-confirm');
 
-    I.waitForElement('h2');
+    I.waitForElement('h2', 10);
     storyTitles.push((await I.grabTextFrom(locate('h2'))).toLowerCase().replace(/\s/g, ''));
     I.amOnPage('/');
   }
 
   I.amOnPage('/#/favorite');
-  I.waitForElement('#search-input');
+  I.waitForElement('#search-input', 10);
   I.seeElement('#search-input');
 
   const searchQuery = storyTitles[1].substring(6, 9);

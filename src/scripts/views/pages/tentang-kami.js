@@ -11,7 +11,7 @@ const TentangKami = {
     return `
       <div class="container-fluid pb-4 mb-5 my-3">
         <div class="container jumbotron2 ">
-          <h2 class="text-center" data-aos="fade-down-right" data-aos-delay="100">Smiling</h2>
+          <!--<h2 class="text-center" data-aos="fade-down-right" data-aos-delay="100">Smiling</h2>-->
           <div class="clearfix pt-2">
             <img
               src="hero_img.jpg"
@@ -19,7 +19,7 @@ const TentangKami = {
               data-aos="zoom-out-down"
               data-aos-delay="100"
             />
-            <p class="my-3 text-center fs-3 col-md-12" data-aos="fade-down" data-aos-delay="200">
+            <p class="my-3 text-center fs-3 col-md-12 p-4" data-aos="fade-down" data-aos-delay="200">
             Aplikasi Smiling (Stories for Family Bonding) dibangun sebagai solusi pemanfaatan gawai untuk memudahkan bonding keluarga sekaligus menarik perhatian anak. Aplikasi ini berisi cerita anak yang disertai media ilustrasi dan musik latar, sehingga orang tua dan anak bisa berinteraksi melalui aktivitas membaca bersama.
             </p>
           </div>
@@ -86,9 +86,15 @@ const TentangKami = {
                         <div class="member-img">
                             <img src="./fahru.jpg" class="img-fluid shadow-lg mb-2 bg-body rounded " alt="">
                             <div class="social">
-                                <a href="https://instagram.com/_fahp19?igshid=MzRlODBiNWFlZA==" target="blank"><i class='fab fa-instagram' style='font-size:25px;background-image: linear-gradient(to right top, #0652dd, #8c3cc8, #c017a9, #de0084, #ec005e, #f2065c, #f70d5a, #fd1457, #ff227a, #ff399e, #ff51c0, #f368e0);'></i></a>
-                                <a href="https://github.com/fahrual" target="blank"><i class='fab fa-github' style='font-size:25px'></i></a>
-                                <a href="https://www.linkedin.com/in/fahru-alfarizi-hananza-putrawan-94379b26a/" target="blank"><i class='fab fa-linkedin' style='font-size:24px;background-image: linear-gradient(to left top, #ffffff, #e0dffe, #b9c2fe, #85a8ff, #1e90ff);'></i></a>
+                              <a href="https://instagram.com/_fahp19?igshid=MzRlODBiNWFlZA==" target="blank">
+                                <img src="instagram.png" alt="Instagram">
+                              </a>
+                              <a href="https://github.com/fahrual" target="blank">
+                                <img src="github.png" alt="GitHub" style="border-radius: 10px;">
+                              </a>
+                              <a href="https://www.linkedin.com/in/fahru-alfarizi-hananza-putrawan-94379b26a/" target="blank">
+                                <img src="linkedin.png" alt="LinkedIn" style="border-radius: 10px;">
+                              </a>
                             </div>
                         </div>
                         <!-- Info -->
@@ -105,9 +111,15 @@ const TentangKami = {
                         <div class="member-img">
                             <img src="./diaz.jpg" class="img-fluid shadow-lg mb-2 bg-body rounded " alt="" >
                             <div class="social">
-                                <a href="https://instagram.com/diaz_kaaa?igshid=NGExMmI2YTkyZg==" target="blank"><i class='fab fa-instagram' style='font-size:25px;background-image: linear-gradient(to right top, #0652dd, #8c3cc8, #c017a9, #de0084, #ec005e, #f2065c, #f70d5a, #fd1457, #ff227a, #ff399e, #ff51c0, #f368e0);'></i></a>
-                                <a href="https://github.com/diazkhalid" target="blank"><i class='fab fa-github' style='font-size:25px;'></i></a>
-                                <a href="https://www.linkedin.com/in/diaz-khalid-ananda-5a135a267/" target="blank"><i class='fab fa-linkedin' style='font-size:24px;background-image: linear-gradient(to left top, #ffffff, #e0dffe, #b9c2fe, #85a8ff, #1e90ff);'></i></a>
+                              <a href="https://instagram.com/diaz_kaaa?igshid=NGExMmI2YTkyZg==" target="blank">
+                                <img src="instagram.png" alt="Instagram">
+                              </a>
+                              <a href="https://github.com/diazkhalid" target="blank">
+                                <img src="github.png" alt="GitHub" style="border-radius: 10px;">
+                              </a>
+                              <a href="https://www.linkedin.com/in/diaz-khalid-ananda-5a135a267/" target="blank">
+                                <img src="linkedin.png" alt="LinkedIn" style="border-radius: 10px;">
+                              </a>
                             </div>
                         </div>
                         <!-- Info -->
@@ -124,9 +136,15 @@ const TentangKami = {
                         <div class="member-img">
                             <img src="./oka.jpg" class="img-fluid shadow-lg mb-2 bg-body rounded " alt="">
                             <div class="social">
-                                <a href="https://instagram.com/okadevara?igshid=OGQ5ZDc2ODk2ZA==" target="blank"><i class='fab fa-instagram' style='font-size:25px;background-image: linear-gradient(to right top, #0652dd, #8c3cc8, #c017a9, #de0084, #ec005e, #f2065c, #f70d5a, #fd1457, #ff227a, #ff399e, #ff51c0, #f368e0);'></i></a>
-                                <a href="https://github.com/okadevara" target="blank"><i class='fab fa-github' style='font-size:25px'></i></a>
-                                <a href="https://www.linkedin.com/in/okadevara/" target="blank"><i class='fab fa-linkedin' style='font-size:24px;background-image: linear-gradient(to left top, #ffffff, #e0dffe, #b9c2fe, #85a8ff, #1e90ff);'></i></a>
+                              <a href="https://instagram.com/okadevara?igshid=OGQ5ZDc2ODk2ZA==" target="blank">
+                                <img src="instagram.png" alt="Instagram">
+                              </a>
+                              <a href="https://github.com/okadevara" target="blank">
+                                <img src="github.png" alt="GitHub" style="border-radius: 10px;">
+                              </a>
+                              <a href="https://www.linkedin.com/in/okadevara/" target="blank">
+                                <img src="linkedin.png" alt="LinkedIn" style="border-radius: 10px;">
+                              </a>
                             </div>
                         </div>
                         <!-- Info -->
@@ -143,9 +161,15 @@ const TentangKami = {
                         <div class="member-img">
                             <img src="./adi.jpg" class="img-fluid shadow-lg mb-2 bg-body rounded " alt="">
                             <div class="social">
-                                <a href="https://instagram.com/adisukma02?igshid=MzNlNGNkZWQ4Mg==" target="blank"><i class='fab fa-instagram' style='font-size:25px;background-image: linear-gradient(to right top, #0652dd, #8c3cc8, #c017a9, #de0084, #ec005e, #f2065c, #f70d5a, #fd1457, #ff227a, #ff399e, #ff51c0, #f368e0);'></i></a>
-                                <a href="https://github.com/RacThug" target="blank"><i class='fab fa-github' style='font-size:25px'></i></a>
-                                <a href="https://www.linkedin.com/in/adi-sukma-a5485b176/" target="blank"><i class='fab fa-linkedin' style='font-size:24px;background-image: linear-gradient(to left top, #ffffff, #e0dffe, #b9c2fe, #85a8ff, #1e90ff);'></i></a>
+                              <a href="https://instagram.com/adisukma02?igshid=MzNlNGNkZWQ4Mg==" target="blank">
+                                <img src="instagram.png" alt="Instagram">
+                              </a>
+                              <a href="https://github.com/RacThug" target="blank">
+                                <img src="github.png" alt="GitHub" style="border-radius: 10px;">
+                              </a>
+                              <a href="https://www.linkedin.com/in/adi-sukma-a5485b176/" target="blank">
+                                <img src="linkedin.png" alt="LinkedIn" style="border-radius: 10px;">
+                              </a>
                             </div>
                         </div>
                         <!-- Info -->
@@ -173,7 +197,7 @@ const TentangKami = {
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
               
-              <form name="smiling-form">
+              <form name="smiling-form" id="smiling-form">
                 <div class="form-group mt-2">
                   <label for="nama">Nama</label>
                   <input type="text" id="inputNama" class="form-control" placeholder="Masukkan nama" name="name" required>
@@ -188,7 +212,7 @@ const TentangKami = {
                 </div>
                 <button type="submit" style="background-color: #e58e26; color: white" class="btn btn-kirim mt-2 btn-submit" id="buttonMsg">Kirim Pesan</button>
 
-              <button class="btn btn-loading mt-2 d-none" style="background-color: #e58e26" type="button" disabled>
+              <button class="btn btn-loading mt-2 d-none" id="button-loading" style="background-color: #e58e26" type="button" disabled>
               <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
               Loading...
               </button>

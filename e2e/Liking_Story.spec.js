@@ -18,14 +18,14 @@ Scenario('liking one story', async ({ I }) => {
 
   I.amOnPage('/');
 
-  I.waitForElement('.card a');
+  I.waitForElement('.card a', 5);
   I.seeElement('.card a');
 
   const firstStory = locate('.card a').first();
   const firstStoryTitle = await I.grabTextFrom(firstStory);
   I.click(firstStory);
 
-  I.waitForElement('#likeButton');
+  I.waitForElement('#likeButton', 10);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
@@ -48,13 +48,13 @@ Scenario('unlike one story', async ({ I }) => {
 
   I.amOnPage('/');
 
-  I.waitForElement('.card a');
+  I.waitForElement('.card a', 10);
   I.seeElement('.card a');
 
   const firstStory = locate('.card a').first();
   I.click(firstStory);
 
-  I.waitForElement('#likeButton');
+  I.waitForElement('#likeButton', 10);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
@@ -64,15 +64,16 @@ Scenario('unlike one story', async ({ I }) => {
   I.click('.swal2-confirm');
 
   I.amOnPage('/#/favorite');
-  I.waitForElement('.card a');
+  I.waitForElement('.card a', 10);
   I.seeElement('.card a');
-  I.click(firstStory);
+  const firstStory2 = locate('.card a').first();
+  I.click(firstStory2);
 
-  I.waitForElement('#likeButton');
+  I.waitForElement('#likeButton', 20);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.waitForElement('#swal2-title');
+  I.waitForElement('#swal2-title', 10);
   const popUpUnlike = await I.grabTextFrom('#swal2-title');
   assert.strictEqual(popUpUnlike, 'Unliked!');
   I.click('.swal2-confirm');

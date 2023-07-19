@@ -17,6 +17,18 @@ const Detail = {
     wave.classList.remove('d-none');
     Session.isNotAdmin();
     return `
+    <div class="container-loading">
+        <div class="cloud front">
+          <span class="left-front"></span>
+          <span class="right-front"></span>
+        </div>
+        <span class="sun sunshine"></span>
+        <span class="sun"></span>
+        <div class="cloud back">
+          <span class="left-back"></span>
+          <span class="right-back"></span>
+        </div>
+    </div>
     <div id="detail-container" class="container d-flex flex-column gap-5 my-5 px-4 px-sm-0"></div>
     <div id="likeButtonContainer"></div>
       `;
@@ -24,8 +36,10 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const loading = document.querySelector('.container-loading');
     const story = await StoryDbSource.detailStory(url.id);
     const review = await StoryDbSource.getReview(url.id);
+    loading.classList.add('d-none');
     const container = document.querySelector('#detail-container');
 
     container.innerHTML = createStoryDetailTemplate(story, review);

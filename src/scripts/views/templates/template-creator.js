@@ -175,9 +175,9 @@ const createReviewTableBody = (review) => `
     <tr>
         <td>${review.id_review}</td>
         <td>${review.id_story}</td>
-        <td>${review.nama}</td>
+        <td id="review-name">${review.nama}</td>
         <td>${review.tanggal}</td>
-        <td>${review.isi_review}</td>
+        <td id="review-isi">${review.isi_review}</td>
         <td>
             <button class="btn-delete" data-review-id="${review.id_review}">Delete</button>
         </td>
@@ -187,9 +187,9 @@ const createReviewTableBody = (review) => `
 const createMessageTableBody = (message) => `
     <tr>
         <td>${message.id_pesan}</td>
-        <td>${message.nama}</td>
-        <td>${message.email}</td>
-        <td>${message.isi_pesan}</td>
+        <td id="msg-name">${message.nama}</td>
+        <td id="msg-email">${message.email}</td>
+        <td id="msg-isi">${message.isi_pesan}</td>
         <td>
             <button class="btn-delete" data-pesan-id="${message.id_pesan}">Delete</button>
         </td>
