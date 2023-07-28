@@ -42,17 +42,20 @@ const DataPesan = {
                     <tbody id="table-body">
                     </tbody>
                 </table>
-                <h3 id="no-data-notif">Tidak ada data</h3>
+                <h3 id="wait-notif">Please Wait...</h3>
+                <h3 id="no-data-notif" style="display: none;">Tidak ada data</h3>
             </div>
         `;
   },
 
   async afterRender() {
     const tableBody = document.querySelector('#table-body');
+    const emptyNotif = document.querySelector('#no-data-notif');
+    const waitNotif = document.querySelector('#wait-notif');
     const messages = await StoryDbSource.getAllMsg();
-    if (messages.length > 0) {
-      const emptyNotif = document.querySelector('#no-data-notif');
-      emptyNotif.style.display = 'none';
+    waitNotif.style.display = 'none';
+    if (messages.length < 0) {
+      emptyNotif.style.display = 'block';
     }
     messages.forEach((message) => {
       tableBody.innerHTML += createMessageTableBody(message);

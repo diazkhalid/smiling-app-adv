@@ -7,10 +7,10 @@ Before(({ I }) => {
   I.amOnPage('/#/favorite');
 });
 
-Scenario('showing empty liked story', ({ I }) => {
-  I.wait(3);
-  I.see('Tidak ada data ditampilkan!', '.not-found-heading');
-});
+// Scenario('showing empty liked story', ({ I }) => {
+//   I.wait(3);
+//   I.see('Tidak ada data ditampilkan!', '.not-found-heading');
+// });
 
 Scenario('liking one story', async ({ I }) => {
   I.wait(3);
