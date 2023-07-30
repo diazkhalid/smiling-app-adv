@@ -43,17 +43,20 @@ const DataReview = {
                     <tbody id="table-body">
                     </tbody>
                 </table>
-                <h3 id="no-data-notif">Tidak ada data</h3>
+                <h3 id="wait-notif">Please Wait...</h3>
+                <h3 id="no-data-notif" style="display: none;">Tidak ada data</h3>
             </div>
         `;
   },
 
   async afterRender() {
     const tableBody = document.querySelector('#table-body');
+    const emptyNotif = document.querySelector('#no-data-notif');
+    const waitNotif = document.querySelector('#wait-notif');
     const reviews = await StoryDbSource.getAllReview();
-    if (reviews.length > 0) {
-      const emptyNotif = document.querySelector('#no-data-notif');
-      emptyNotif.style.display = 'none';
+    waitNotif.style.display = 'none';
+    if (reviews.length < 0) {
+      emptyNotif.style.display = 'block';
     }
     reviews.forEach((review) => {
       tableBody.innerHTML += createReviewTableBody(review);
